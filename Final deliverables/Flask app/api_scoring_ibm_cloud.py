@@ -15,7 +15,7 @@ header = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + mltok
 app = flask.Flask(__name__,static_url_path='')
 CORS(app)
 
-@app.route('/')
+@app.route('/',methods =['GET','POST'])
 def home():
     return render_template('Home.html')
 
